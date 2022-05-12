@@ -2,10 +2,11 @@ package com.gamingroom;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Iterator;
 
 /**
  * A singleton service for the game engine
- * 
+ *
  * @author coce@snhu.edu
  */
 public class GameService {
@@ -20,8 +21,7 @@ public class GameService {
 	 */
 	private static long nextGameId = 1;
 
-	// FIXME: Add missing pieces to turn this class a singleton
-	/*Local instance. final single object instance which is the singleton.*/
+	/*Local instance. final single object instance which is the singleton pattern.*/
 	private static final GameService instance = new GameService();
 
 	/*Accessor for the instance. Allowing classes outside to
@@ -32,7 +32,7 @@ public class GameService {
 
 	/**
 	 * Construct a new game instance
-	 * 
+	 *
 	 * @param name the unique name of the game
 	 * @return the game instance (new or existing)
 	 */
@@ -41,7 +41,6 @@ public class GameService {
 		// a local game instance
 		Game game = null;
 
-		// FIXME: Use iterator to look for existing game with same name
 		// if found, simply return the existing instance
 		for (Game currentGame : games) {
 			if (currentGame.getName().equals(name)) {
@@ -79,7 +78,6 @@ public class GameService {
 		// a local game instance
 		Game game = null;
 
-		// FIXME: Use iterator to look for existing game with same id
 		// if found, simply assign that instance to the local variable
 		// for loop list of games. If statement if one already exists
 		// return game instance
@@ -102,13 +100,19 @@ public class GameService {
 		// a local game instance
 		Game game = null;
 
-		// FIXME: Use iterator to look for existing game with same name
-		// if found, simply assign that instance to the local variable
-		// for loop list of games. If statement if one already exists
-		// return game instance
-		for (Game currentGame : games) {
-			if (currentGame.getName().equals(name)) {
-				game = currentGame;
+		// Instance iterator
+		Iterator<Game> gamesIterator = games.iterator();
+
+		// Iterate over games list
+		while (gamesIterator.hasNext()) {
+
+			// Set local Game var to next item in list
+			Game gameInstance = gamesIterator.next();
+
+			// Does game name already exist?
+			if (gameInstance.getName().equalsIgnoreCase(name)) {
+				// If game name already exists, return the game instance
+				game = gameInstance;
 			}
 		}
 
