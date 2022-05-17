@@ -16,7 +16,7 @@ import java.util.List;
  * @author coce@snhu.edu
  *
  */
-// Team class extends Entity class. 
+// Team class extends Entity class.
 public class Team extends Entity{
 
 	/**
@@ -32,8 +32,8 @@ public class Team extends Entity{
 	}
 
 	/**
-	 * Uses iterator pattern to find existing player with same name or
-	 * adds unique named player to list
+	 * Uses iterator pattern to find existing player within same name or
+	 * adding a unique named player to list
 	 *
 	 * @return Player instance
 	 */
@@ -45,10 +45,10 @@ public class Team extends Entity{
 		// Instance iterator
 		Iterator<Player> playersIterator = players.iterator();
 
-		// Iterate over players list
+		// While loop that Iterates over players list
 		while (playersIterator.hasNext()) {
 
-			// Set local Player var to next item in list
+			// Set local Player variable to next item in list
 			Player playerInstance = playersIterator.next();
 
 			// Does player name already exist?
