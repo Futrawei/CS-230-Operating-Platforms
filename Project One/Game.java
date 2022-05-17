@@ -46,10 +46,10 @@ public class Game extends Entity {
 		// Instance iterator
 		Iterator<Team> teamsIterator = teams.iterator();
 
-		// Iterate over teams list
+		// Iterator over a teams list
 		while (teamsIterator.hasNext()) {
 
-			// Set local Team var to next item in list
+			// Setting the local Team variable to next item in list
 			Team teamInstance = teamsIterator.next();
 
 			// Does team name already exist?
