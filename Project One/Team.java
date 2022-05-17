@@ -12,6 +12,7 @@ package com.gamingroom;
  * @author coce@snhu.edu
  *
  */
+// Team class extends Entity class.
 public class Team extends Entity{
 	long id;
 	String name;
