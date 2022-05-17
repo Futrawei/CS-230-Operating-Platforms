@@ -16,13 +16,14 @@ import java.util.List;
  * @author coce@snhu.edu
  *
  */
+// Team class extends Entity class. 
 public class Team extends Entity{
 
 	/**
 	 * A list of the active teams
 	 */
-	private List<Player> players = new ArrayList<Player>();
-	
+	private final List<Player> players = new ArrayList<Player>();
+
 	/*
 	 * Constructor with an identifier and name
 	 */
@@ -32,9 +33,8 @@ public class Team extends Entity{
 
 	/**
 	 * Uses iterator pattern to find existing player with same name or
-     * adds unique named player to list
+	 * adds unique named player to list
 	 *
-	 * @param name
 	 * @return Player instance
 	 */
 	public Player addPlayer(String name) {
