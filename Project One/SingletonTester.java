@@ -18,11 +18,11 @@ public class SingletonTester {
 		This will check if there is a singular memory, and if not
 		 create a new instance. This will allow flexibility to
 		 create more objects. This will restrict the instantiation of a class
-		 and ensure one instance of this class exists.*/
+		 and ensure one instance of this class. */
 		GameService service = GameService.getInstance(); // replaced null with GameService.getInstance
 		
 		// a simple for loop to print the games
-		for (int i = 0; i < Objects.requireNonNull(service).getGameCount(); i++) {
+		for (int i = 1; i <= service.getGameCount(); i++) {
 			System.out.println(service.getGame(i));
 		}
 
