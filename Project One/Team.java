@@ -12,7 +12,7 @@ package com.gamingroom;
  * @author coce@snhu.edu
  *
  */
-public class Team {
+public class Team extends Entity{
 	long id;
 	String name;
 	
@@ -20,6 +20,7 @@ public class Team {
 	 * Constructor with an identifier and name
 	 */
 	public Team(long id, String name) {
+		super();
 		this.id = id;
 		this.name = name;
 	}
