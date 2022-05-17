@@ -12,7 +12,8 @@ package com.gamingroom;
  * @author coce@snhu.edu
  *
  */
-public class Player {
+// Player class extends to Entity class. 
+public class Player extends Entity{
 	long id;
 	String name;
 	
